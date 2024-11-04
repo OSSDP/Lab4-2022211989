@@ -31,7 +31,7 @@ public class L2022211989_14_Test {
     public void test1() {
         Solution solution = new Solution();
         teststr = "192192192192";
-        Collections.addAll(testmsg, "192.192.192.192");
+        Collections.addAll(testmsg, "192.192.192");
         List<String> stringList = solution.restoreIpAddresses(teststr);
         assertTrue("%s 这是合法IP", stringList.equals(testmsg));
     }
