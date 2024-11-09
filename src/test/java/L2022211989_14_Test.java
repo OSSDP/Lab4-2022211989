@@ -72,7 +72,7 @@ public class L2022211989_14_Test {
         teststr = "111";
         List<String> stringList = solution.restoreIpAddresses(teststr);
         assertTrue("%s 这是非法IP", stringList.equals(testmsg));
-        
+
     }
 
     /**
