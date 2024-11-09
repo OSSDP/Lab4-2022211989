@@ -2,8 +2,8 @@ import org.example.Solution;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class L2022211989_14_Test {
     /**
@@ -33,7 +33,7 @@ public class L2022211989_14_Test {
         teststr = "192192192192";
         Collections.addAll(testmsg, "192.192.192.192");
         List<String> stringList = solution.restoreIpAddresses(teststr);
-        assertTrue("%s 这是合法IP", stringList.equals(testmsg));
+        assertTrue(stringList.equals(testmsg));
     }
 
     /**
@@ -46,7 +46,7 @@ public class L2022211989_14_Test {
         teststr = "1111";
         Collections.addAll(testmsg, "1.1.1.1");
         List<String> stringList = solution.restoreIpAddresses(teststr);
-        assertTrue("%s 这是合法IP", stringList.equals(testmsg));
+        assertTrue(stringList.equals(testmsg));
     }
 
     /**
@@ -59,7 +59,7 @@ public class L2022211989_14_Test {
         teststr = "101023";
         Collections.addAll(testmsg, "1.0.10.23", "1.0.102.3", "10.1.0.23","10.10.2.3","101.0.2.3");
         List<String> stringList = solution.restoreIpAddresses(teststr);
-        assertTrue("%s 这是合法IP", stringList.equals(testmsg));
+        assertTrue(stringList.equals(testmsg));
     }
 
     /**
@@ -71,7 +71,8 @@ public class L2022211989_14_Test {
         Solution solution = new Solution();
         teststr = "111";
         List<String> stringList = solution.restoreIpAddresses(teststr);
-        assertTrue("%s 这是非法IP", stringList.equals(testmsg));
+        assertTrue(stringList.equals(testmsg));
+
     }
 
     /**
@@ -83,7 +84,7 @@ public class L2022211989_14_Test {
         Solution solution = new Solution();
         teststr = "1111111111111";
         List<String> stringList = solution.restoreIpAddresses(teststr);
-        assertTrue("%s 这是非法IP", stringList.equals(testmsg));
+        assertTrue(stringList.equals(testmsg));
     }
 
     /**
@@ -95,6 +96,6 @@ public class L2022211989_14_Test {
         Solution solution = new Solution();
         teststr = "123*123";
         List<String> stringList = solution.restoreIpAddresses(teststr);
-        assertFalse("%s 这是非法IP", stringList.equals(testmsg));
+        assertFalse(stringList.equals(testmsg));
     }
 }
